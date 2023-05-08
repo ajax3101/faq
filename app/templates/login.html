@@ -1,0 +1,30 @@
+{% extends "admin/base.html" %}
+ 
+{% block body %}
+    <div class="auth-wrapper">
+        <h1>{{ _('Авторизация') }}</h1>
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.username.label }}<br>
+                {{ form.username() }}
+                {% if form.username.errors %}
+                    {{ error.list(form.username.errors) }}
+                {% endif %}
+            </p>
+            <p>
+                {{ form.password.label }}<br>
+                {{ form.password() }}
+                {% if form.password.errors %}
+                    {{ error.list(form.password.errors) }}
+                {% endif %}
+            </p>
+            <p>
+                {{ form.remember_me() }} {{ form.remember_me.label }}
+            </p>
+            <p>
+                {{ form.submit(class='btn btn-primary') }}
+            </p>
+        </form>
+    </div>
+{% endblock body %}

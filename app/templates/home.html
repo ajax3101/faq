@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="text-center my-4">Список вопросов</h1>
+    <ul class="list-group">
+      {% for question in questions %}
+        <li class="list-group-item">
+          <a href="{{ url_for('question', question_id=question.id) }}">{{ question.title }}</a>
+        </li>
+      {% else %}
+        <li class="list-group-item">Вопросов нет</li>
+      {% endfor %}
+    </ul>
+    <div class="mt-4">
+      <a href="{{ url_for('add_question') }}" class="btn btn-primary">Задать вопрос</a>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-SWobV8JvNl+SYK7QXOpeWJm0ZmcsM4f4tda0jDzLKtAaAMtHkS58oKX+Yn/f/XBjK5+5kjwJF6nB5Cn8+eKzJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ url_for('home') }}">Вопросы и ответы</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('add_question') }}">Задать вопрос</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% block content %}{% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-ZvpUoI8G3fFNHLqn6oi4ZyFvY5P5JA/W2xyIk5i/XA6BAdBhqFbUxZpQN6D5BdPv70WO+w8WIM1kUzDh+xbl2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js" integrity="sha512-+dLkW8OeIzH0ovlvD0FQ2EhX9rAlI+ppAGlkZrnYKjNx/i1s4L4fcySGk4oKcqvNtXlTtN83jdNlMLMwItE7jg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-s7+XG0kQq7ZaY53jQsDzSw4+te4V7zJ+oG0t/zcvXtT1xJHbYGwYnYpJlNNjcaSTbNfsDwuojvQ2upE9XrN+xQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script
